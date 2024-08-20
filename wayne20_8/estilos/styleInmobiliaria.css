@@ -1,0 +1,219 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Estilos generales */
+html {
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+/* Estilos puntuales */
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s;
+}
+
+a:hover {
+    color: #CCCCCC;
+    transform: scale(1.05);
+}
+
+/* Estilos header */
+header {
+    background: #ffffff;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    height: 13%;
+    width: 100%;
+    padding: 1% 1%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header li ul{
+    display: none;
+}
+header li:hover > ul{
+    display: block;
+    flex-direction:column;
+    background: #ffffff;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    padding: 15px;
+    padding-top: 0px;
+}
+
+#logo {
+    width: 5%;
+    min-width: 80px;
+}
+#logo,#logo1{
+    transition: transform 0.3s;
+}
+#logo:hover,#logo1:hover {
+    transform: scale(1.05);
+}
+#logo1 {
+    width: 5vh;
+}
+
+/* Estilos footer */
+footer {
+    background-color: #CCCCCC;   
+    text-align: center;
+    padding: 5%;
+    width: 100%; 
+    height: 1fr;
+    color: black;
+    margin-top: 5%;
+}
+
+.containerInmobiliaria {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto auto ; 
+    align-items: center;
+    grid-template-areas: 
+        "intro" 
+        "wayneNorth"
+        "wayneSouth" 
+        "secciones"
+        "secciones2";
+    }
+
+.intro{
+    text-align: justify;
+    margin: 5%;
+    margin-bottom: 0%;
+    margin-top: 13vh;
+    grid-area: intro;
+}
+.wayneNorth{
+    grid-area: wayneNorth;
+    margin-top: 5%;
+    padding-top: 5%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: url(../fotos/Wayne-HQ.jpg) no-repeat top center;
+    background-size: cover;
+}
+.wayneSouth{
+    grid-area: wayneSouth;
+    margin-top: 5%;
+    padding-top: 5%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: url(../fotos/imageHQSouth.png) no-repeat top center;
+    background-size: cover;
+}
+
+.secciones, .secciones2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-self: center;
+}
+.secciones2 {
+    grid-area: secciones2;
+}
+.secciones {
+    margin-top: 5%;
+    grid-area: secciones;
+}
+.seccion{
+    background-size: cover;
+    padding: 5%;
+    background: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    h3,p{
+        opacity: 0;
+        text-align: justify;
+        margin-top: 1vh;
+    }
+}
+
+#texto1{
+    background: url(../fotos/edificio1.jpg) no-repeat center center;
+}
+#texto2{
+    background: url(../fotos/edificio2.jpg) no-repeat center center;
+}
+#texto3{
+    background: url(../fotos/edificio3.jpg) no-repeat center center;
+}
+#texto4{
+    background: url(../fotos/edificio4.jpg) no-repeat center center;
+}
+#texto5{
+    background: url(../fotos/edificio5.jpg) no-repeat center center;
+}
+#texto6{
+    background: url(../fotos/edificio6.jpg) no-repeat center center;
+}
+
+#texto3:hover,#texto2:hover,#texto1:hover,#texto6:hover,#texto5:hover,#texto4:hover{
+    p,h3{
+        opacity: 1;
+    }
+    background-image:none;
+}
+
+
+.footerInmobiliaria{
+    grid-area: footer;
+}
+
+
+.link {
+    text-decoration:underline;
+    color: antiquewhite;
+    transition: transform 0.3s;
+    font-size: smaller;
+    font-style: italic;
+}
+.textInfo {
+    padding: 1rem;
+    background: rgba(235, 235, 235, 0.062);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+.textInfo2 {
+    color: antiquewhite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.137);
+    font-size: x-large;
+    padding-left: 10%;
+}
+.textInfo h2{
+    text-align: center;
+}
+.proyectoText{
+    color: #000;
+    font-size: x-large;
+    text-align: justify;
+    margin: 5%;
+    margin-bottom: 0%;
+}

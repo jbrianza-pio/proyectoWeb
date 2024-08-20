@@ -1,0 +1,171 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Estilos generales */
+html {
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos puntuales */
+a {
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s;
+}
+
+a:hover {
+    color: #CCCCCC;
+    transform: scale(1.05);
+}
+
+/* Estilos header */
+header {
+    background: #ffffff;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    height: 13%;
+    width: 100%;
+    padding: 1% 1%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header li ul{
+    display: none;
+}
+header li:hover > ul{
+    display: block;
+    flex-direction:column;
+    background: #ffffff;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    padding: 15px;
+    padding-top: 0px;
+}
+
+#logo {
+    width: 5%;
+    min-width: 80px;
+}
+#logo,#logo1{
+    transition: transform 0.3s;
+}
+#logo:hover,#logo1:hover {
+    transform: scale(1.05);
+}
+#logo1 {
+    width: 5vh;
+}
+/* Estilos footer */
+footer {
+    background-color: #CCCCCC;   
+    text-align: center;
+    padding: 5%;
+    width: 100%; 
+    height: 1fr;
+    color: black;
+    margin-top: 5%;
+}
+
+/* Grids y elementos de la página */
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title title"
+        "advise new-1 new-2"
+        "advise new-3 new-4 "
+        "advise new-5 new-6"
+        "advise new-8 new-9 ";
+    padding: 20px;
+}
+.title {
+    grid-area: title;
+    background-color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 1%;
+    margin-top: 13vh;
+}
+.advise {
+    grid-area: advise;
+    background-color: #ffffff;
+    padding: 5%;
+    border-radius: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 3;
+}
+.new-1, .new-2, .new-3, .new-4, .new-5, .new-6, .new-7, .new-8, .new-9 {
+    position: relative;
+    margin: 1%;
+    background-color: #ffffff;
+    border-radius: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+        width: 30vw;
+        object-fit: cover;
+        border-radius: 1%;
+    }
+}
+text{
+    min-width: 30vw;
+    height: fit-content;
+}
+.new-7, .new-8, .new-9 {
+    img{
+        min-width: 30vw;
+        min-height:29vh;
+    }
+}
+
+.new-1 .text, .new-2 .text, .new-3 .text, .new-4 .text, .new-5 .text, .new-6 .text, .new-7 .text, .new-8 .text, .new-9 .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.new-1:hover img, .new-2:hover img, .new-3:hover img, .new-4:hover img, .new-5:hover img, .new-6:hover img, .new-7:hover img, .new-8:hover img, .new-9:hover img {
+    opacity: 0;
+}
+
+.new-1:hover .text, .new-2:hover .text, .new-3:hover .text, .new-4:hover .text, .new-5:hover .text, .new-6:hover .text, .new-7:hover .text, .new-8:hover .text, .new-9:hover .text {
+    opacity: 1;
+}
